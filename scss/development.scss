@@ -1,0 +1,57 @@
+@import "vars";
+.error-desc{
+  margin-top: 130px;
+}
+.big-error{
+  font-size: 250px;
+}
+.error-info{
+  margin-top: 200px;
+  padding: 0 60px;
+}
+.development-button{
+  margin-top: 30px;
+}
+.development-subtitle{
+  margin-top: 20px;
+}
+.error-img{
+  max-width: 350px;
+  width: 100%;
+  height: 471px;
+  position: relative;
+  animation: loader 5s infinite ;
+  animation-timing-function: linear; 
+  &::before{
+    content: '!?';
+    position: absolute;
+    top: -130px;
+    transform: rotate(-45deg);
+    font-size: 100px;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    transform: rotate(-18.29deg);
+    left: 80px;
+  }
+}
+.development-img{
+  max-width: 430px;
+  width: 100%;
+  height: 547px;
+  position: relative;
+  animation: loader 5s infinite ;
+  animation-timing-function: linear; 
+}
+
+.development-title{
+  font-size: 40px;
+  line-height: 50px;
+}
+.development-subtitle{
+  font-size: 18px;
+  line-height: 28px;
+}
+.development-info{
+  padding: 0 20px;
+  margin-top: 300px;
+}

@@ -1,0 +1,67 @@
+@import "vars";
+.navigation{
+  display: flex;
+  justify-content: flex-end;
+}
+.sf-menu>li{
+  background: none;
+  border:none;
+}
+.sf-menu>li>a{
+  border:none;
+  font-size: 13px;
+  line-height: 16px;
+  color: $text;
+  margin: 0 0 0 50px;
+}
+.sf-menu>li>a span::before{
+  margin-left: 0;
+  font-size: 10px;
+  position: absolute;
+  right: -10px;
+  color: $main;
+}
+.sf-menu>li:hover, .sf-menu>li.sfHover{
+  background: none
+}
+.sf-menu ul{
+  background: #0C041B;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.sf-menu a{
+  border: none;
+  color: $text;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px 40px 10px 20px;
+}
+.sf-menu ul {
+  box-shadow: none;
+  min-width: 100%;
+}
+.sf-menu a:hover{
+  text-decoration: none;
+}
+.sf-menu a span::before{
+  margin-left: 0;
+  position: absolute;
+  right: 5px;
+  font-size: 10px;
+  color: $main;
+}
+.sf-menu li:hover, .sf-menu li.sfHover{
+  background: none;
+}
+.sf-menu ul li{
+  background: none;
+}
+.sf-menu ul ul li{
+  background: none;
+}
+#mm-blocker{
+  z-index: 0;
+}
+.mm-menu.mm-theme-white{
+  z-index: 990;
+}

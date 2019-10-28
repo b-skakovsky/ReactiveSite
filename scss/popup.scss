@@ -1,0 +1,229 @@
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  // .mfp-bg {
+  //   -webkit-backdrop-filter: blur(5px);
+  //   backdrop-filter: blur(5px);
+  //   background: rgba(12, 4, 27, 0.5);
+  // }
+}
+ // .mfp-bg {
+ //    filter: blur(5px);
+ //  }
+ * {
+  transition: filter .25s ease;
+}
+ .mfp-wrap ~ * {
+
+  filter: blur(5px);
+}
+.mfp-zoom-in {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+::placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.5);
+}
+:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.5);
+}
+::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.white-popup-block{
+  max-width: 490px;
+  background: red;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(0deg, #0C041B, #0C041B), linear-gradient(0deg, #EBADE4, #EBADE4), #C4C4C4;
+  border-radius: 25px;
+  padding: 40px 30px;
+  input{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 0 0 20px;
+    font-family: $default-light;
+    margin-bottom: 20px;
+    &:focus{
+      outline: none
+    }
+  }
+  .btn{
+    background: linear-gradient(93.62deg, #DA2128 0%, #F25700 99.23%);
+    border-radius: 20px;
+    color: $text;
+    padding: 10px 20px 10px 20px;
+    margin-top: 30px;
+    outline: none;
+    &:active{
+      outline: none;
+    }
+    &:focus{
+      outline: none;
+      box-shadow:none;
+    }
+  }
+}
+.form-img{
+  position: absolute;
+  height: 780px;
+  width: 770px;
+  top: -30%;
+  left: 160%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mfp-close-btn-in .mfp-close{
+  color: $text;
+  border:1px solid $text;
+  border-radius: 50%;
+  opacity: 1;
+}
+.white-popup-block h2{
+  font-size: 32px;
+  line-height: 50px;
+}
+.form-info{
+  font-family: $default-light;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.mfp-close{
+  font-size: 18px;
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+
+}
+.mfp-close-btn-in .mfp-close{
+  top: 30px;
+  right: 40px;
+}
+// .tut-luboy-class {
+//     padding: 20px 10px 15px 10px;
+// }
+.form-help{
+  display: block;
+  margin: 20px 0 0 0;
+}
+.wpcf7-list-item-label {
+    font-family:$default-light;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 40px;
+    position: relative;
+}
+.form-text-red{
+  color: #DB2425;
+  border-bottom: 1px solid #DB2425;
+  display: block;
+    width: 208px;
+}
+
+.wpcf7-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.wpcf7-list-item-label p{
+  position: absolute;
+  margin: 0 0 0 40px;
+  top: -12px;
+}
+.wpcf7-checkbox .wpcf7-list-item-label::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background: #ffffff;
+}
+
+.wpcf7-checkbox input:checked~.wpcf7-list-item-label::after {
+    display: block;
+}
+
+.wpcf7-checkbox input:checked~.wpcf7-list-item-label::before {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wpcf7-checkbox .wpcf7-list-item-label::after {
+    left: 11px;
+    top: -7px;
+    width: 10px;
+    height: 20px;
+    border: solid #DB2425;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    display: none;
+}
+.sub-title-form{
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  font-family: $default-light;
+}
+input.wpcf7-form-control.wpcf7-text.wpcf7-tel.wpcf7-validates-as-required.wpcf7-validates-as-tel {
+  max-width: 205px;
+  width: 100%;
+}
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required{
+  max-width: 370px;
+  width: 100%;
+}

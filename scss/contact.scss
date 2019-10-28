@@ -1,0 +1,36 @@
+@import "vars";
+.main-sub-screen{
+  background: radial-gradient(50% 50% at 50% 50%, rgba(12, 4, 27, 0) 0%, #0C041B 100%), url('../img/background/star.png');
+  width: 100%;
+  background-position: 0 -20px;
+  background-size: cover;
+  .header{
+    padding-top: 50px;
+    margin-top: 0;
+  }
+}
+.contact-title{
+  top:270px;
+
+  line-height: 0;
+}
+.contact-desc{
+  margin-top: 80px;
+  margin-bottom: 150px;
+}
+.contact-section{
+  .white-popup-block{
+    max-width: 575px;
+    width: 100%;
+    padding: 30px 50px;
+    background: rgba(27, 12, 47, 0.6);
+  }
+}
+.contact-social{
+  max-width: 575px;
+  width: 100%;
+  padding: 30px 5px;
+  background: red;
+  background: rgba(27, 12, 47, 0.6);
+  border-radius: 10px;
+}
